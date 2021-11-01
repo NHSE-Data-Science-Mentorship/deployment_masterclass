@@ -1,11 +1,12 @@
-from case_regression_example.loader import load_latest_data
 import datetime
-import pandas as pd
+
+from case_regression_example.loader import load_latest_data
 
 
 def fake_csv() -> str:
     csv = [
-        "areaCode,areaName,areaType,date,newCasesByPublishDate,newCasesBySpecimenDate"
+        "areaCode,areaName,areaType,date,"
+        "newCasesByPublishDate,newCasesBySpecimenDate"
     ]
     codes = {"E06000003": "Redcar and Cleveland", "E06000014": "York"}
 

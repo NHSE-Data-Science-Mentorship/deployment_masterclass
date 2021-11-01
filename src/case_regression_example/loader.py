@@ -1,10 +1,12 @@
-import requests
 import io
+
 import pandas as pd
+import requests
 
 URL = (
     "https://api.coronavirus.data.gov.uk/v2/data?"
-    "areaType=utla&metric=newCasesByPublishDate&metric=newCasesBySpecimenDate&format=csv"
+    "areaType=utla&metric=newCasesByPublishDate"
+    "&metric=newCasesBySpecimenDate&format=csv"
 )
 
 
