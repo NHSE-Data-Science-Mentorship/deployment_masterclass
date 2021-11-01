@@ -17,6 +17,14 @@ cache:
 lint:
   stage: lint
   before_script:
-    - pip install black
+    - pip install .[linting]
   script:
     - black --check src/
+
+test-job:
+  stage: test
+  before_script:
+    - pip install .[testing]
+  script:
+    - pytest tests
+   
