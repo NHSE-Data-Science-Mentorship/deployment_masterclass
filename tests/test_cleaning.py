@@ -28,12 +28,12 @@ def test_train_test_split_features(fake_df):
 
 
 def test_train_test_split_shapes(fake_df):
-    X_train, y_train, X_test, y_test = train_test_split(
+    X_train, X_test, y_train, y_test = train_test_split(
         fake_df, ["z", "x"], "y"
     )
 
     assert X_train.shape[0] == y_train.shape[0]  # Same number of rows
     assert X_train.shape[1] == 2  # We have 2 features
-    assert y_train.shape[1] == 1
+    assert y_train.shape == (X_train.shape[0], )
 
-    assert X_test.shape[0] == y_train.shape[0]  # Same number of rows
+    assert X_test.shape[0] == y_test.shape[0]  # Same number of rows
